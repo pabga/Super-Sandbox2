@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Modifier",
+        "movementType": "Air",
+        "uniques": [
+            "Cannot attack",
+            "Uncapturable",
+            "Unable to capture cities",
+            "No Sight",
+            "Invisible to others"
+        ]
+    },
+    {
+        "name": "Sandboxer",
+        "movementType": "Land",
+        "uniques": [
+            "Can move immediately once bought",
+            "Can pass through impassable tiles",
+            "Ignores Zone of Control",
+            "May enter foreign tiles without open borders",
+            "All tiles cost 1 movement",
+            // CORREGIDO: Eliminar estas uniques de costo de embarque/desembarque
+            // "[1] Movement point cost to disembark",
+            // "[1] Movement point cost to embark",
+
+            // CORREGIDO: La sintaxis de "Defense bonus when embarked"
+            // La sugerencia del error es "+100% Strength (when defending) (when Embarcadas)"
+            // El formato más robusto que suele funcionar es con "<>" para las condiciones:
+            "+100% Strength <when defending> <when embarked>", // <-- Usa esta línea.
+            // Si el error persiste, prueba con la sugerencia exacta del juego,
+            // pero las palabras clave dentro de <> suelen ser en inglés y minúscula.
+
+            "May attack when embarked",
+            "Eliminates combat penalty for attacking across a coast",
+            "Eliminates combat penalty for attacking over a river",
+            "Cannot be intercepted",
+            "Invisible to others"
+        ]
+    }
+]
